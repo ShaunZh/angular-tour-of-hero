@@ -15,7 +15,6 @@ export class HeroesComponent implements OnInit {
     name: "Windstorm",
   };
   heroes: Hero[];
-  selectHero: Hero;
 
   constructor(
     private heroService: HeroService,
@@ -34,6 +33,5 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.messageService.add("HeroesComponent: onSelect hero id = " + hero.id);
-    this.selectHero = hero;
   }
 }
